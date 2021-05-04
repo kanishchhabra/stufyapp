@@ -1,6 +1,8 @@
 /* Update Code for users and projects, a bit unsure of SELECTION ones that is all. Coordinator is added*/ 
 DROP TABLE IF EXISTS users, projects;
 
+
+
 USE users_db;
 
 CREATE TABLE users (
@@ -19,4 +21,8 @@ CREATE TABLE projects (
 	project_coordinator INT(11) NOT NULL,
 	PRIMARY KEY (project_id),
 	FOREIGN KEY (project_coordinator) REFERENCES users (user_id)
+	/* code for other fields once it's good
+	FOREIGN KEY (project_discipline) REFERENCES users (project_discipline)
+	FOREIGN KEY (project_members) REFERENCES users (user_id)
+	*/
 )ENGINE=InnoDB, DEFAULT CHARACTER SET utf8;
