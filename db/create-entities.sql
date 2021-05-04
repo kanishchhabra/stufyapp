@@ -1,12 +1,11 @@
 /* code for creating all the required entities for the project*/
 
-DROP TABLE IF EXISTS friendship, student, project, university, discipline, qualification;
+DROP TABLE IF EXISTS friendship, projectmember, student, project, university, discipline, qualification;
 
 USE stufy;
 /*--------------------------------------------------------------------------*/
 CREATE TABLE university (
 	university_name VARCHAR(50) NOT NULL,
-	city VARCHAR(20) NOT NULL,
 	state VARCHAR(3) NOT NULL,
 	
 	PRIMARY KEY (university_name)
