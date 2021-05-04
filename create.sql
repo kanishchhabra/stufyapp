@@ -1,4 +1,4 @@
-/* Update Code for users and projects, a bit unsure of SELECTION ones that is all. */
+/* Update Code for users and projects, a bit unsure of SELECTION ones that is all. Coordinator is added*/ 
 DROP TABLE IF EXISTS users, projects;
 
 USE users_db;
@@ -16,5 +16,7 @@ CREATE TABLE projects (
 	project_id INT(5) NOT NULL AUTO_INCREMENT,
 	project_name VARCHAR(30) NOT NULL,
 	project_description VARCHAR(100) NOT NULL,
-	PRIMARY KEY (project_id)
+	project_coordinator INT(11) NOT NULL,
+	PRIMARY KEY (project_id),
+	FOREIGN KEY (project_coordinator) REFERENCES users (user_id)
 )ENGINE=InnoDB, DEFAULT CHARACTER SET utf8;
