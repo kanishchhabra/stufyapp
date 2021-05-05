@@ -1,6 +1,5 @@
 <?php
 DEFINE('CONTROLLER_PATH', $_SERVER['DOCUMENT_ROOT'] . "/controller");
-echo CONTROLLER_PATH . '/select_db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +47,7 @@ echo CONTROLLER_PATH . '/select_db.php';
             <?php
             $table_name = 'discipline';
             $column_name = 'discipline_name';
-            include CONTROLLER_PATH . 'select_db.php';
+            include CONTROLLER_PATH . '/select_db.php';
             ?>
         </select><br>
 
