@@ -1,5 +1,6 @@
 <?php
-define('CONTROLLER_PATH', "../controller/");
+DEFINE('CONTROLLER_PATH', $_SERVER['DOCUMENT_ROOT'] . "/controller");
+echo CONTROLLER_PATH . '/select_db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +31,7 @@ define('CONTROLLER_PATH', "../controller/");
             <?php
             $table_name = 'university';
             $column_name = 'university_name';
-            include CONTROLLER_PATH . 'select_db.php';
+            include CONTROLLER_PATH . '/select_db.php';
             ?>
         </select><br>
 
@@ -56,7 +57,7 @@ define('CONTROLLER_PATH', "../controller/");
             <?php
             $table_name = 'qualification';
             $column_name = 'qualification_name';
-            include CONTROLLER_PATH . 'select_db.php';
+            include CONTROLLER_PATH . '/select_db.php';
             ?>
         </select><br>
 
