@@ -1,5 +1,5 @@
 <?php
-DEFINE('DB_PATH', $_SERVER['DOCUMENT_ROOT'] . "/db");
+require $_SERVER['DOCUMENT_ROOT'] . "/controller/paths.php";
 DEFINE('SALT', '61A394DEF8C5B072');
 require DB_PATH . '/db.php';
 
