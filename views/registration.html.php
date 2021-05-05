@@ -1,5 +1,6 @@
 <?php
 DEFINE('CONTROLLER_PATH', $_SERVER['DOCUMENT_ROOT'] . "/controller");
+DEFINE('HTML_CONTROLLER_PATH', '../controller/');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +13,7 @@ DEFINE('CONTROLLER_PATH', $_SERVER['DOCUMENT_ROOT'] . "/controller");
 </head>
 
 <body>
-    <form action="" method="post">
+    <form action=<?php echo HTML_CONTROLLER_PATH . '/create_user.php' ?> method="post">
         <label for="fisrt_name">First Name</label><br>
         <input type="text" name="first_name" id="first_name" placeholder="First Name"><br>
 
@@ -63,7 +64,7 @@ DEFINE('CONTROLLER_PATH', $_SERVER['DOCUMENT_ROOT'] . "/controller");
         <label for="password">Password</label><br>
         <input type="password" name="password" id="password"><br>
 
-        <button type="submit">Register</button>
+        <button type="submit" name="create_user">Register</button>
 
 
     </form>
