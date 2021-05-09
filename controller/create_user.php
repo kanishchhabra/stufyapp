@@ -36,6 +36,7 @@ if (isset($_POST['create_user'])) {
             'salt' => $salt
         );
         $stmt->execute($binding);
+        header('Location:/');
     } catch (PDOException $errors) {
         echo $errors->getMessage();
     }

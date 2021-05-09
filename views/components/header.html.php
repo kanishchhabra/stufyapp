@@ -1,6 +1,7 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . "/controller/paths.php";
-echo "
+session_start();
+?>
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -12,4 +13,3 @@ echo "
 </head>
 
 <body>
-";
