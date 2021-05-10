@@ -1,5 +1,6 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . "/views/components/header.html.php";
+require CONTROLLER_PATH . "/authenticated_check.php";
 ?>
 <h1>Stufy - Discovering Peers</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsam beatae, magnam odio deserunt ab ex asperiores <br>

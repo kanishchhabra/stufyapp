@@ -13,3 +13,10 @@ session_start();
 </head>
 
 <body>
+    <?php
+    if (!(empty($_SESSION['authenticated']))) {
+        if ($_SESSION['authenticated']) {
+            require COMPONENTS_PATH . "/protected-navigator.html.php";
+        }
+    }
+    ?>
