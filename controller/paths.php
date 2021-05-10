@@ -8,5 +8,5 @@ DEFINE('FUNCTIONS_PATH', CONTROLLER_PATH . "/functions"); # used in user registr
 
 #HTML relative paths
 DEFINE('HTML_CONTROLLER_PATH', '../../controller/'); # used in user registration form
-DEFINE('HTML_COMPONENTS_PATH', '../views/components/'); #used in main.html
-DEFINE('HTML_LAYOUTS_PATH', '../views/layouts/');#used in main.html
+DEFINE('HTML_COMPONENTS_PATH', '../components/'); #used in main.html
+DEFINE('HTML_LAYOUTS_PATH', '../layouts/');#used in main.html

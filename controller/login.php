@@ -1,6 +1,7 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . "/controller/paths.php";
 require DB_PATH . '/db.php';
+session_start();
 
 if (isset($_POST['login'])) {
 
@@ -12,7 +13,7 @@ if (isset($_POST['login'])) {
 
     if (checkEmail($email, $db)) {
         if (checkPassword($email, $password, $db)) {
-            echo "Logged in as " . $_SESSION['firstName'];
+            header('Location: /controller/main.php');
         } else {
             echo "Wrong Password";
         }
