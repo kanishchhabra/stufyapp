@@ -13,6 +13,13 @@ if (isset($_POST['login'])) {
 
     if (checkEmail($email, $db)) {
         if (checkPassword($email, $password, $db)) {
+            echo "Logged in as " . $_SESSION['firstName'] . $_SESSION['lastName'];
+			echo "<br>Email " . $_SESSION['email'];
+
+            /* include the files with the list of all student requests for that specific logged in user */
+            include CONTROLLER_PATH . "/view_students.php";			
+			
+            include LAYOUTS_PATH . '/view_students.html.php';
             header('Location: /controller/main.php');
         } else {
             echo "Wrong Password";
