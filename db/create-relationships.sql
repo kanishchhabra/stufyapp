@@ -20,7 +20,7 @@ CREATE TABLE friendship (
 	
 	PRIMARY KEY (sending_student, receiving_student),
 
-	FOREIGN KEY (sending_student) REFERENCES student (email) ON DELETE CASCADE,
+	FOREIGN KEY (receiving_student) REFERENCES student (email) ON DELETE CASCADE,
 	FOREIGN KEY (sending_student) REFERENCES student (email) ON DELETE CASCADE
 
 )ENGINE=InnoDB, DEFAULT CHARACTER SET utf8;
