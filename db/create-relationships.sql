@@ -2,8 +2,7 @@
 	Request Status contains 0, 1, 2
 	0: Pending 
 	1: Accepted
-	2: Declined
-	3: Blocked
+	2: Blocked
  */
 
 USE stufy;

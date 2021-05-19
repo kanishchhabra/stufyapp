@@ -21,6 +21,9 @@
             $button_name = "accept_request";
             $button_value = "Accept Request";
             require PARTIALS_PATH . "/button_input_request.html.php";
+            $button_name = "reject_request";
+            $button_value = "Reject Request";
+            require PARTIALS_PATH . "/button_input_request.html.php";
         } elseif (in_array($result['email'], $_SESSION['friends'])) {
             $button_name = "remove_friend";
             $button_value = "Remove Friend";

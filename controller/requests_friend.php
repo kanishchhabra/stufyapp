@@ -57,12 +57,11 @@ elseif (isset($_POST['reject_request'])) {
     $sender = $_POST['email'];
 
     try {
-        $query = "UPDATE friendship SET request_status = :request_status, action_student = :student_two WHERE (student_one = :student_two OR student_one = :student_one) AND (student_two = :student_two OR student_two = :student_one)";
+        $query = "DELETE FROM friendship WHERE (student_one = :student_two OR student_one = :student_one) AND (student_two = :student_two OR student_two = :student_one)";
         $stmt = $db->prepare($query);
         $binding = array(
             ':student_two' => $recipient,
-            ':student_one' => $sender,
-            ':request_status' => 2,
+            ':student_one' => $sender
         );
         $stmt->execute($binding);
         header("Location: /views/content/protected-view_students.html.php");
