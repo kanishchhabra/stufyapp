@@ -10,7 +10,7 @@
         <?php
         $table_name = 'discipline';
         $column_name = 'discipline_name';
-        include CONTROLLER_PATH . '/options_validation.php';
+        include CONTROLLER_PATH . '/form_options_validation.php';
         ?>
     </select><br>
 

@@ -16,7 +16,7 @@
         <?php
         $table_name = 'university';
         $column_name = 'university_name';
-        include CONTROLLER_PATH . '/options_validation.php';
+        include CONTROLLER_PATH . '/form_options_validation.php';
         ?>
     </select><br>
 
@@ -33,7 +33,7 @@
         <?php
         $table_name = 'discipline';
         $column_name = 'discipline_name';
-        include CONTROLLER_PATH . '/options_validation.php';
+        include CONTROLLER_PATH . '/form_options_validation.php';
         ?>
     </select><br>
 
@@ -42,7 +42,7 @@
         <?php
         $table_name = 'qualification';
         $column_name = 'qualification_name';
-        include CONTROLLER_PATH . '/options_validation.php';
+        include CONTROLLER_PATH . '/form_options_validation.php';
         ?>
     </select><br>
 

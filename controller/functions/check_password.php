@@ -13,6 +13,9 @@ function checkPassword($email, $pass, $db)
             if ($result['email'] == $email) {
                 $pass = md5($result['salt'] . $pass);
                 if ($pass == $result['pass']) {
+                    #Following code adds all the friend requests user has sent
+                    require FUNCTIONS_PATH . "/update_session_arrays.php";
+
                     $_SESSION['authenticated'] = true;
                     $_SESSION['firstName'] = $result['firstName'];
                     $_SESSION['lastName'] = $result['lastName'];

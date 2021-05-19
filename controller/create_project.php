@@ -23,7 +23,7 @@ if (isset($_POST['create_project'])) {
             'project_status' =>  $_POST['project_status']
         );
         $stmt->execute($binding);
-        header('Location:/views/layouts/protected-view_projects.html.php');
+        header('Location:/views/content/protected-view_projects.html.php');
     } catch (PDOException $errors) {
         echo $errors->getMessage();
     }

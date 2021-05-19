@@ -1,25 +1,18 @@
 <?php
+require DB_PATH . '/db.php';
+try {
+	$query = "SELECT * FROM student";
 
-include DB_PATH . '/db.php';
-
-
-echo "<h1>Incoming Requests</h1>";
-$update = "UPDATE friendship
-SET request_status=?
-WHERE sending_student=?";
-$query = "SELECT sending_student FROM friendship WHERE receiving_student = ?";
-            
-			
-			$stmt = $db->prepare($query);
-			
-			$binding = array($_SESSION['email']);
-			
-			$stmt->execute($binding);
-			
-			$results = $stmt->fetchall(PDO::FETCH_ASSOC);
-			
-			foreach($results as $result){
-				echo "<p>{$result['sending_student']}</p>";
-			}
-
-?>
+	$stmt = $db->prepare($query);
+	$stmt->execute();
+	$results = $stmt->fetchall(PDO::FETCH_ASSOC);
+	foreach ($results as $result) {
+		#Excludes own profile to be listed in the friend list
+		if ($result['email'] == $_SESSION['email']) {
+			continue;
+		}
+		include PARTIALS_PATH . "/protected-student_block.html.php";
+	}
+} catch (PDOException $errors) {
+	echo $errors->getMessage();
+}

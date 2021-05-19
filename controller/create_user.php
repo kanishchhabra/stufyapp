@@ -10,7 +10,7 @@ if (isset($_POST['create_user'])) {
 
     try {
         $query = "INSERT INTO student
-        (firstName, lastname, DOB, email, university, study_year, discipline, qualification, pass, salt)
+        (firstName, lastName, DOB, email, university, study_year, discipline, qualification, pass, salt)
         VALUES
         (:first_name, 
         :last_name, 
