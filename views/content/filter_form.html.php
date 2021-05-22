@@ -2,7 +2,7 @@
 require $_SERVER['DOCUMENT_ROOT'] . "/controller/paths.php";
 ?>
 
-<form action=<?php echo HTML_CONTROLLER_PATH . 'new.php' ?> method='get'>
+<form action=<?php echo HTML_CONTROLLER_PATH . 'filter.php' ?> method='get'>
 <label for='discipline'>Discipline</label><br>
     <select name='discipline' id='discipline'>
         <?php
