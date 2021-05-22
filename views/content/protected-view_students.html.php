@@ -8,6 +8,15 @@ require CONTROLLER_PATH . "/unauthenticated_check.php";
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quam exercitationem suscipit modi reiciendis, <br>
     ut quos iste accusantium perferendis doloremque optio ratione soluta tempore aspernatur ipsa animi rem deleniti molestias?</p>
 
+
+<!--button in partial,
+included here,
+action = filters page in content
+-->
+<?php
+include PARTIALS_PATH . "/filter_button.html.php";
+?>
+
 <?php
 require CONTROLLER_PATH . "/view_students.php";
 ?>
