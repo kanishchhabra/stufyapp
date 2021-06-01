@@ -2,6 +2,8 @@
 # Paths file should be included
 # Database connection file must not be included
 require DB_PATH . '/db.php';
+#Adds an empty array for filtered students
+#$_SESSION['filtered_students'] = null;
 try {
     $query = "SELECT student_two FROM friendship WHERE student_one = :student_one AND request_status = :request_status";
     $stmt = $db->prepare($query);

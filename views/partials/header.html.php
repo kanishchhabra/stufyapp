@@ -1,6 +1,7 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . "/controller/paths.php";
 session_start();
+error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
 <html lang='en'>

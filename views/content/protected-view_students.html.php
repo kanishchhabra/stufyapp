@@ -1,6 +1,7 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . "/views/partials/header.html.php";
 require CONTROLLER_PATH . "/unauthenticated_check.php";
+error_reporting(E_ALL & ~E_NOTICE);
 ?>
 <section class="container">
     <h1>Students</h1>
@@ -21,7 +22,17 @@ action = filters page in content
 <div class="container">
     <div class="row row-cols-auto">
         <?php
-        require CONTROLLER_PATH . "/view_students.php";
+        if (!($_SESSION['filtered_students'])) {
+            require CONTROLLER_PATH . "/view_students.php";
+        } else {
+            $results = $_SESSION['filtered_students'];
+            foreach ($results as $result) {
+                if (!($result['email'] == $_SESSION['email'])) {
+                    require PARTIALS_PATH . "//protected-student_block.html.php";
+                }
+            }
+            unset($_SESSION['filtered_students']);
+        }
         ?>
     </div>
 </div>
