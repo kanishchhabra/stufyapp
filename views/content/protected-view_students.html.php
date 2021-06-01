@@ -24,6 +24,8 @@ action = filters page in content
         <?php
         if (!($_SESSION['filtered_students'])) {
             require CONTROLLER_PATH . "/view_students.php";
+        } elseif ($_SESSION['filtered_students'] == 'empty') {
+            unset($_SESSION['filtered_students']);
         } else {
             $results = $_SESSION['filtered_students'];
             foreach ($results as $result) {

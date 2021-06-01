@@ -16,7 +16,11 @@ try {
     $stmt->execute($binding);
 
     $results = $stmt->fetchall(PDO::FETCH_ASSOC);
-    $_SESSION['filtered_students'] = $results;
+    if (empty($results)) {
+        $_SESSION['filtered_students'] = "empty";
+    } else {
+        $_SESSION['filtered_students'] = $results;
+    }
     header("Location: /views/content/protected-view_students.html.php");
 } catch (PDOException $e) {
     echo $e;
