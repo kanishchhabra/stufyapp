@@ -16,7 +16,7 @@ session_start();
     <?php
     if (!(empty($_SESSION['authenticated']))) {
         if ($_SESSION['authenticated']) {
-            require FUNCTIONS_PATH . "/update_session_arrays.php";
+            require CONTROLLER_PATH . "/update_session_arrays.php";
             require PARTIALS_PATH . "/protected-navigator.html.php";
         }
     }
