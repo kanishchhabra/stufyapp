@@ -1,1 +1,1 @@
-<li><a href=<?php echo HTML_CONTENT_PATH . 'protected-view_filters.html.php'; ?> method='get' name='filter'>Filter Students</a></li>
+<a class="btn btn-primary m-2" href=<?php echo HTML_CONTENT_PATH . 'protected-view_filters.html.php'; ?> method='get' name='filter'>Filter</a>
