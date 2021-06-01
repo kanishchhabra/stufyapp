@@ -1,6 +1,7 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . "/controller/paths.php";
 require DB_PATH . '/db.php';
+session_start();
 
 $uni = $_GET['university'];
 $sy = $_GET['study_year'];
@@ -17,19 +18,11 @@ try {
 
     $results = $stmt->fetchall(PDO::FETCH_ASSOC);
 
-    foreach($results As $result){
-        echo "<p>{$result['firstName']} {$result['lastName']}</p>
-        Contact: {$result['email']}
-        <br>Studies at: {$result['university']} for {$result['study_year']} years
-        <br>Discipline: {$result['discipline']}
-        <br>Qualifications: {$result['qualification']}";
+    foreach ($results as $result) {
+        if (!($result['email'] == $_SESSION['email'])) {
+            include PARTIALS_PATH . "/protected-student_block.html.php";
+        }
     }
-     
-    
-    
-    
 } catch (PDOException $e) {
     echo $e;
 }
-
-?>
