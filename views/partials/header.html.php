@@ -13,7 +13,7 @@ session_start();
     <link rel="stylesheet" href=<?php echo HTML_PARTIALS_PATH . "css/bootstrap.css" ?>>
 </head>
 
-<body>
+<body class="position-relative">
     <?php
     if (!(empty($_SESSION['authenticated']))) {
         if ($_SESSION['authenticated']) {
