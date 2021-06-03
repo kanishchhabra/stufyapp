@@ -13,10 +13,8 @@ error_reporting(E_ALL & ~E_NOTICE);
 included here,
 action = filters page in content
 -->
-    <?php
-    include PARTIALS_PATH . "/filter_button.html.php";
-    include PARTIALS_PATH . "/form-filters.html.php";
-    ?>
+    <button class="btn btn-primary mb-2" name='filter' id="filterButton">Filter</button>
+    <?php include PARTIALS_PATH . "/form-filters.html.php" ?>
 </section>
 
 

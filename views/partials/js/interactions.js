@@ -24,5 +24,11 @@ $(document).ready(function () {
             filterData.push($(this).val());
         });
         return filterData;
-    }
+    };
+    $('#filterButton').click(function () {
+        $("#studentsFilters").slideToggle();
+    });
+    $('#filterHide').click(function () {
+        $("#studentsFilters").slideUp();
+    });
 });
