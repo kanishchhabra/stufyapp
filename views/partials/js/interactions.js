@@ -38,7 +38,7 @@ $(document).ready(function () {
     /**Logic for friend reuests goes next, we don't want to reload the entire page once request action is made.
      * Only relevant elements of the page should be udated.
      */
-    $(".actionRequest").click(function () {
+    $(".requestButton").on('click', '.actionRequest', function () {
         var email = $(this).attr('id');
         var name = $(this).attr("name");
         var action = "data";
@@ -51,6 +51,6 @@ $(document).ready(function () {
                 $(".requestButton:has([id='" + email + "'])").html(response);
             }
         });
-
     });
+
 });
