@@ -9,10 +9,6 @@ error_reporting(E_ALL & ~E_NOTICE);
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quam exercitationem suscipit modi reiciendis, <br>
         ut quos iste accusantium perferendis doloremque optio ratione soluta tempore aspernatur ipsa animi rem deleniti molestias?</p>
 
-    <!--button in partial,
-included here,
-action = filters page in content
--->
     <button class="btn btn-primary mb-2" name='filter' id="filterButton">Filter</button>
     <?php include PARTIALS_PATH . "/form-filters.html.php" ?>
 </section>
