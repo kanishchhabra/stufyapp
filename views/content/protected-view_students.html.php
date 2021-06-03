@@ -21,21 +21,9 @@ action = filters page in content
 
 
 <div class="container">
-    <div class="row row-cols-auto">
+    <div class="row row-cols-auto" id="studentsList">
         <?php
-        if (!($_SESSION['filtered_students'])) {
-            require CONTROLLER_PATH . "/view_students.php";
-        } elseif ($_SESSION['filtered_students'] == 'empty') {
-            unset($_SESSION['filtered_students']);
-        } else {
-            $results = $_SESSION['filtered_students'];
-            foreach ($results as $result) {
-                if (!($result['email'] == $_SESSION['email'])) {
-                    require PARTIALS_PATH . "//protected-student_block.html.php";
-                }
-            }
-            unset($_SESSION['filtered_students']);
-        }
+        require CONTROLLER_PATH . "/view_students.php";
         ?>
     </div>
 </div>

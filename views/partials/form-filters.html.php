@@ -1,4 +1,4 @@
-<form class="mb-3" style="max-width: 768px;" action=<?php echo HTML_CONTROLLER_PATH . 'filter.php' ?> method='GET'>
+<form class="mb-3" style="max-width: 768px;" method='GET'>
     <h2>Discipline</h2>
     <?php
     $table_name = 'student';
