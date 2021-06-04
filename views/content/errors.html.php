@@ -10,7 +10,7 @@ require CONTROLLER_PATH . "/authenticated_check.php";
             <strong>
                 <?php
                 print_r($_SESSION['errors']) . "<br>";
-                session_unset('errors');
+                unset($_SESSION['errors']);
                 ?>
             </strong>
         </p>
