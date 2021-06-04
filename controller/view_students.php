@@ -34,7 +34,8 @@ if (isset($_POST['action'])) {
 			include PARTIALS_PATH . "/protected-student_block.html.php";
 		}
 	} catch (PDOException $errors) {
-		echo $errors->getMessage();
+		echo $_SESSION['errors'] = $errors->getMessage();
+		header('Location: /views/content/errors.html.php');;
 	}
 } else {
 	require DB_PATH . '/db.php';
@@ -52,6 +53,7 @@ if (isset($_POST['action'])) {
 			include PARTIALS_PATH . "/protected-student_block.html.php";
 		}
 	} catch (PDOException $errors) {
-		echo $errors->getMessage();
+		echo $_SESSION['errors'] = $errors->getMessage();
+		header('Location: /views/content/errors.html.php');;
 	}
 }

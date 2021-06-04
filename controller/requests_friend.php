@@ -59,7 +59,8 @@ if (isset($_POST['action']) == 'data') {
                 require PARTIALS_PATH . "/button_input_request.html.php";
             }
         } catch (PDOException $errors) {
-            echo $errors->getMessage();
+            echo $_SESSION['errors'] = $errors->getMessage();
+            header('Location: /views/content/errors.html.php');;
         }
     }
 
@@ -111,7 +112,8 @@ if (isset($_POST['action']) == 'data') {
                 require PARTIALS_PATH . "/button_input_request.html.php";
             }
         } catch (PDOException $errors) {
-            echo $errors->getMessage();
+            echo $_SESSION['errors'] = $errors->getMessage();
+            header('Location: /views/content/errors.html.php');;
         }
     }
 
@@ -162,7 +164,8 @@ if (isset($_POST['action']) == 'data') {
                 require PARTIALS_PATH . "/button_input_request.html.php";
             }
         } catch (PDOException $errors) {
-            echo $errors->getMessage();
+            echo $_SESSION['errors'] = $errors->getMessage();
+            header('Location: /views/content/errors.html.php');;
         }
     }
 
@@ -214,7 +217,8 @@ if (isset($_POST['action']) == 'data') {
                 require PARTIALS_PATH . "/button_input_request.html.php";
             }
         } catch (PDOException $errors) {
-            echo $errors->getMessage();
+            echo $_SESSION['errors'] = $errors->getMessage();
+            header('Location: /views/content/errors.html.php');;
         }
     }
 
@@ -266,7 +270,8 @@ if (isset($_POST['action']) == 'data') {
                 require PARTIALS_PATH . "/button_input_request.html.php";
             }
         } catch (PDOException $errors) {
-            echo $errors->getMessage();
+            echo $_SESSION['errors'] = $errors->getMessage();
+            header('Location: /views/content/errors.html.php');;
         }
     }
 
@@ -317,7 +322,8 @@ if (isset($_POST['action']) == 'data') {
                 require PARTIALS_PATH . "/button_input_request.html.php";
             }
         } catch (PDOException $errors) {
-            echo $errors->getMessage();
+            echo $_SESSION['errors'] = $errors->getMessage();
+            header('Location: /views/content/errors.html.php');;
         }
     }
 }

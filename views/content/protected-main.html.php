@@ -2,10 +2,11 @@
 require $_SERVER['DOCUMENT_ROOT'] . "/views/partials/header.html.php";
 require CONTROLLER_PATH . "/unauthenticated_check.php";
 ?>
+<figure class="width-100 bg-primary">
+    <img class="img-fluid" src="/views/partials/images/stufy_logo.PNG" alt="">
+</figure>
 <section class="container-fluid">
-    <figure class="width-100 bg-primary">
-        <img class="img-fluid" src="/views/partials/images/stufy_logo.PNG" alt="">
-    </figure>
+
     <h1>Welcome <?php echo $_SESSION['firstName'] ?></h1>
     <section class="card mb-2">
         <div class="card-body">

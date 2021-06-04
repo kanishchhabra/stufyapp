@@ -11,7 +11,8 @@ error_reporting(E_ALL & ~E_NOTICE);
             You will find <strong>Filters</strong> allowing you narrow down the list of students based on your preferences.
             Hoping that you'll like it.
         </p>
-
+        <button class="btn btn-primary mb-2" name='filter' id="filterButton">Filter</button>
+        <?php include PARTIALS_PATH . "/form-filters.html.php" ?>
     </div>
 </section>
 

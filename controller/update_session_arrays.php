@@ -17,8 +17,9 @@ try {
     foreach ($requests as $request) {
         array_push($_SESSION['sent_friend_requests'], $request['student_two']);
     }
-} catch (PDOException $e) {
-    $e->getMessage();
+} catch (PDOException $errors) {
+    $_SESSION['errors'] = $errors->getMessage();
+    header('Location: /views/content/errors.html.php');;
 }
 
 #Following code adds all the friends of the user
@@ -41,8 +42,9 @@ try {
             array_push($_SESSION['friends'], $request['student_one']);
         }
     }
-} catch (PDOException $e) {
-    $e->getMessage();
+} catch (PDOException $errors) {
+    $_SESSION['errors'] = $errors->getMessage();
+    header('Location: /views/content/errors.html.php');;
 }
 
 #Following code adds all the friend requests user has received
@@ -59,6 +61,7 @@ try {
     foreach ($requests as $request) {
         array_push($_SESSION['received_friend_requests'], $request['student_one']);
     }
-} catch (PDOException $e) {
-    $e->getMessage();
+} catch (PDOException $errors) {
+    $_SESSION['errors'] = $errors->getMessage();
+    header('Location: /views/content/errors.html.php');;
 }

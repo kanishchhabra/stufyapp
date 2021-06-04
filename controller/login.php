@@ -15,9 +15,11 @@ if (isset($_POST['login'])) {
         if (checkPassword($email, $password, $db)) {
             header('Location: /controller/main.php');
         } else {
-            echo "Wrong Password";
+            $_SESSION['errors'] = 'Wrong Credentials';
+            header('Location: /views/content/errors.html.php');
         }
     } else {
-        echo "FALSE";
+        $_SESSION['errors'] = "Something went Wrong";
+        header('Location: /views/content/errors.html.php');
     }
 }

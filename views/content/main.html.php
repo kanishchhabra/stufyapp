@@ -2,11 +2,11 @@
 require $_SERVER['DOCUMENT_ROOT'] . "/views/partials/header.html.php";
 require CONTROLLER_PATH . "/authenticated_check.php";
 ?>
+<figure class="width-100 bg-primary">
+    <img class="img-fluid" src="/views/partials/images/stufy_logo.PNG" alt="">
+</figure>
 <section class="container-fluid">
-    <figure class="width-100 bg-primary">
-        <img class="img-fluid" src="/views/partials/images/stufy_logo.PNG" alt="">
-    </figure>
-    <h1>Welcme to Stufy</h1>
+    <h1>Welcome to Stufy</h1>
     <section class="card mb-2">
         <div class="card-body">
             <h2 class="card-heading">What is it?</h2>

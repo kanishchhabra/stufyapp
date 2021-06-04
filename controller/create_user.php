@@ -7,12 +7,12 @@ require DB_PATH . '/db.php';
 if (isset($_POST['create_user'])) {
     $salt = str_shuffle(SALT);
     $password = md5($salt . $_POST['password']);
-    
+
     /* get the POST email */
     $email = $_POST['email'];
-    
+
     /* validate the email */
-    if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "valid";
         try {
             $query = "INSERT INTO student
@@ -28,7 +28,7 @@ if (isset($_POST['create_user'])) {
             (SELECT qualification_name FROM qualification WHERE qualification_name = :qualification), 
             :pass, 
             :salt)";
-    
+
             $stmt = $db->prepare($query);
             $binding = array(
                 'first_name' => $_POST['first_name'],
@@ -45,11 +45,11 @@ if (isset($_POST['create_user'])) {
             $stmt->execute($binding);
             header('Location:/');
         } catch (PDOException $errors) {
-            echo $errors->getMessage();
+            $_SESSION['errors'] = $errors->getMessage();
+            header('Location: /views/content/errors.html.php');
         }
     } else {
-        echo "Invalid email!";
+        $_SESSION['errors'] = 'Invalid Credentials';
+        header('Location: /views/content/errors.html.php');
     }
-
-    
 }

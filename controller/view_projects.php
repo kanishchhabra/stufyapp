@@ -11,5 +11,6 @@ try {
         include PARTIALS_PATH . "/protected-project_block.html.php";
     }
 } catch (PDOException $errors) {
-    echo $errors->getMessage();
+    echo $_SESSION['errors'] = $errors->getMessage();
+    header('Location: /views/content/errors.html.php');;
 }

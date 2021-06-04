@@ -3,7 +3,7 @@
     <div class="card-body">
         <span class="text-light">
             <strong>&#169 Kanish Chhabra 2021. All rights Reserved</strong><br>
-            With assistance of Shaakya Weerasundra.
+            with assistance of Shaakya Weerasundra.
         </span>
     </div>
     <script src=<?php echo HTML_PARTIALS_PATH . "js/bootstrap.bundle.js" ?>></script>

@@ -25,6 +25,7 @@ if (isset($_POST['create_project'])) {
         $stmt->execute($binding);
         header('Location:/views/content/protected-view_projects.html.php');
     } catch (PDOException $errors) {
-        echo $errors->getMessage();
+        $_SESSION['errors'] = $errors->getMessage();
+        header('Location: /views/content/errors.html.php');
     }
 }
